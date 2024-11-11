@@ -1,0 +1,136 @@
+{
+  "uuid": "2cd7a655-0a93-406f-9cd1-f23c6320ef07",
+  "historyId": "bb0adb8f31151d9366ca2d95dde53e28",
+  "testCaseId": "b2a09ae5c9c3474073f569b67510b268",
+  "fullName": "demoTest/Features/APITest/Verify object details returned using ID",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "APITest"
+    },
+    {
+      "name": "tag",
+      "value": "ApiTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify object details returned using ID",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  User has a parameter 5",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "ID",
+          "value": "5",
+          "excluded": false
+        }
+      ],
+      "start": 1731322644306,
+      "stop": 1731322644306
+    },
+    {
+      "name": "When  User requests object details using objects and 5",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Request URI",
+          "value": "https://api.restful-api.dev/objects/5",
+          "excluded": false
+        }
+      ],
+      "start": 1731322644306,
+      "stop": 1731322645114
+    },
+    {
+      "name": "Then  User should get object with name as Samsung Galaxy Z Fold2 and status code 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Response Status",
+          "value": "OK",
+          "excluded": false
+        },
+        {
+          "name": "Response Body",
+          "value": "{\"id\":\"5\",\"name\":\"Samsung Galaxy Z Fold2\",\"data\":{\"price\":689.99,\"color\":\"Brown\"}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731322645114,
+      "stop": 1731322645114
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "ID",
+      "value": "\"5\"",
+      "excluded": false
+    },
+    {
+      "name": "Endpoint",
+      "value": "\"objects\"",
+      "excluded": false
+    },
+    {
+      "name": "StatusCode",
+      "value": "\"200\"",
+      "excluded": false
+    },
+    {
+      "name": "Name",
+      "value": "\"Samsung Galaxy Z Fold2\"",
+      "excluded": false
+    }
+  ],
+  "start": 1731322644306,
+  "stop": 1731322645115
+}

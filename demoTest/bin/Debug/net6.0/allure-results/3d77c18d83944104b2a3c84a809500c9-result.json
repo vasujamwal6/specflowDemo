@@ -1,0 +1,140 @@
+{
+  "uuid": "86f27c41-dabd-4ec1-adda-db4477ea517c",
+  "historyId": "43efb4337ac526931bdd6ab4b6ef06ed",
+  "testCaseId": "b2a09ae5c9c3474073f569b67510b268",
+  "fullName": "demoTest/Features/APITest/Verify object details returned using ID",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "APITest"
+    },
+    {
+      "name": "tag",
+      "value": "ApiTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify object details returned using ID",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Received Incorrect Status Code: 404\r\n  Expected: 200\r\n  But was:  404\r\n",
+    "trace": "NUnit.Framework.AssertionException:   Received Incorrect Status Code: 404\r\n  Expected: 200\r\n  But was:  404\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual, String message, Object[] args)\r\n   at demoTest.StepDefinitions.APITestStepDefinitions.ThenUserShouldGetObjectWithNameAndStatusCode(String name, Int32 statusCode) in C:\\Users\\vasudev.singh\\source\\repos\\demoTest\\demoTest\\StepDefinitions\\APITestStepDefinitions.cs:line 62\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  User has a parameter 1000",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "ID",
+          "value": "1000",
+          "excluded": false
+        }
+      ],
+      "start": 1731322645122,
+      "stop": 1731322645122
+    },
+    {
+      "name": "When  User requests object details using objects and 1000",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Request URI",
+          "value": "https://api.restful-api.dev/objects/1000",
+          "excluded": false
+        }
+      ],
+      "start": 1731322645122,
+      "stop": 1731322645995
+    },
+    {
+      "name": "Then  User should get object with name as Oppo and status code 200",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Received Incorrect Status Code: 404\r\n  Expected: 200\r\n  But was:  404\r\n",
+        "trace": "NUnit.Framework.AssertionException:   Received Incorrect Status Code: 404\r\n  Expected: 200\r\n  But was:  404\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual, String message, Object[] args)\r\n   at demoTest.StepDefinitions.APITestStepDefinitions.ThenUserShouldGetObjectWithNameAndStatusCode(String name, Int32 statusCode) in C:\\Users\\vasudev.singh\\source\\repos\\demoTest\\demoTest\\StepDefinitions\\APITestStepDefinitions.cs:line 62\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Response Status",
+          "value": "NotFound",
+          "excluded": false
+        },
+        {
+          "name": "Response Body",
+          "value": "{\"error\":\"Oject with id=1000 was not found.\"}",
+          "excluded": false
+        }
+      ],
+      "start": 1731322645995,
+      "stop": 1731322645997
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "ID",
+      "value": "\"1000\"",
+      "excluded": false
+    },
+    {
+      "name": "Endpoint",
+      "value": "\"objects\"",
+      "excluded": false
+    },
+    {
+      "name": "StatusCode",
+      "value": "\"200\"",
+      "excluded": false
+    },
+    {
+      "name": "Name",
+      "value": "\"Oppo\"",
+      "excluded": false
+    }
+  ],
+  "start": 1731322645122,
+  "stop": 1731322645997
+}

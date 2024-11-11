@@ -1,0 +1,136 @@
+{
+  "uuid": "23b4f7f9-d9b8-462c-b1a5-d8eb50d2c8d7",
+  "historyId": "35bf4601ba8400195056e579bd8e2739",
+  "testCaseId": "b2a09ae5c9c3474073f569b67510b268",
+  "fullName": "demoTest/Features/APITest/Verify object details returned using ID",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "APITest"
+    },
+    {
+      "name": "tag",
+      "value": "ApiTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify object details returned using ID",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  User has a parameter 3",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "ID",
+          "value": "3",
+          "excluded": false
+        }
+      ],
+      "start": 1731322643404,
+      "stop": 1731322643411
+    },
+    {
+      "name": "When  User requests object details using objects and 3",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Request URI",
+          "value": "https://api.restful-api.dev/objects/3",
+          "excluded": false
+        }
+      ],
+      "start": 1731322643424,
+      "stop": 1731322644269
+    },
+    {
+      "name": "Then  User should get object with name as Apple iPhone 12 Pro Max and status code 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Response Status",
+          "value": "OK",
+          "excluded": false
+        },
+        {
+          "name": "Response Body",
+          "value": "{\"id\":\"3\",\"name\":\"Apple iPhone 12 Pro Max\",\"data\":{\"color\":\"Cloudy White\",\"capacity GB\":512}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731322644269,
+      "stop": 1731322644277
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "ID",
+      "value": "\"3\"",
+      "excluded": false
+    },
+    {
+      "name": "Endpoint",
+      "value": "\"objects\"",
+      "excluded": false
+    },
+    {
+      "name": "StatusCode",
+      "value": "\"200\"",
+      "excluded": false
+    },
+    {
+      "name": "Name",
+      "value": "\"Apple iPhone 12 Pro Max\"",
+      "excluded": false
+    }
+  ],
+  "start": 1731322643396,
+  "stop": 1731322644278
+}

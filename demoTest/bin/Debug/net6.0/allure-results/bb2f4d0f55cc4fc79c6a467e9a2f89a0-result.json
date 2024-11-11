@@ -1,0 +1,141 @@
+{
+  "uuid": "f7533f6a-e25f-416f-929d-abd834001e6e",
+  "historyId": "4c0886cfd13818509ac3bed85c00f708",
+  "testCaseId": "52a6fa2a24b6d69ac27ebeb208daf790",
+  "fullName": "demoTest/Features/APITestRestSharp/Verify object details recieved using ID",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "APITestRestSharp"
+    },
+    {
+      "name": "tag",
+      "value": "ApiTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify object details recieved using ID",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  User has an ID 3 to request for objects",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "ID",
+          "value": "3",
+          "excluded": false
+        },
+        {
+          "name": "Request URI",
+          "value": "https://api.restful-api.dev/objects/3",
+          "excluded": false
+        }
+      ],
+      "start": 1731322643404,
+      "stop": 1731322643423
+    },
+    {
+      "name": "When  User requests details using endpoint and ID 3",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Response Status",
+          "value": "OK",
+          "excluded": false
+        },
+        {
+          "name": "Response Body",
+          "value": "{\"id\":\"3\",\"name\":\"Apple iPhone 12 Pro Max\",\"data\":{\"color\":\"Cloudy White\",\"capacity GB\":512}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731322643424,
+      "stop": 1731322644276
+    },
+    {
+      "name": "Then  User should recieve object details with name as Apple iPhone 12 Pro Max and status code 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Verified Response",
+          "value": "{\"id\":\"3\",\"name\":\"Apple iPhone 12 Pro Max\",\"data\":{\"color\":\"Cloudy White\",\"capacity GB\":512}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731322644276,
+      "stop": 1731322644277
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "ID",
+      "value": "\"3\"",
+      "excluded": false
+    },
+    {
+      "name": "Endpoint",
+      "value": "\"objects\"",
+      "excluded": false
+    },
+    {
+      "name": "StatusCode",
+      "value": "\"200\"",
+      "excluded": false
+    },
+    {
+      "name": "Name",
+      "value": "\"Apple iPhone 12 Pro Max\"",
+      "excluded": false
+    }
+  ],
+  "start": 1731322643396,
+  "stop": 1731322644281
+}

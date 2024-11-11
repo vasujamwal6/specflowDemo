@@ -1,0 +1,16 @@
+﻿{
+  "language": {
+    "feature": "en-US"
+  },
+  "plugins": [
+    {
+      "name": "SpecFlow.Plugins.NUnit",
+      "parameters": {
+        "parallel": "Features"
+      }
+    }
+  ],
+  "stepAssemblies": [
+    { "assembly": "Allure.SpecFlowPlugin" }
+  ]
+}

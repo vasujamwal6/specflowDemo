@@ -1,0 +1,92 @@
+{
+  "uuid": "fe363b70-01f0-4256-9bb8-936ba7516843",
+  "historyId": "10d860c4be1dc02089dba65360fc86ab",
+  "testCaseId": "d3c7619b6a5d56d7a1b480b73e414f58",
+  "fullName": "demoTest/Features/Verify youtube search feature/Search for BBC Earth",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Verify youtube search feature"
+    },
+    {
+      "name": "tag",
+      "value": "UI"
+    }
+  ],
+  "links": [],
+  "name": "Search for BBC Earth",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  Open the browser",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1731322648756,
+      "stop": 1731322648757
+    },
+    {
+      "name": "When  Enter the URL",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1731322648757,
+      "stop": 1731322656238
+    },
+    {
+      "name": "Then  Search for the BBC Earth",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1731322656238,
+      "stop": 1731322661394
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1731322648756,
+  "stop": 1731322661394
+}
