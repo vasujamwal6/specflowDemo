@@ -2,12 +2,14 @@
 
 ### Configuration: 
 > API Automation frameworks: RestSharp & HTTPClient
+
 > Reporting: Allure reports & Extent reports
 
 ### Pre-Requisite for Desktop Automation:
 1. Install 'WinAppDriver.exe' before execution <https://github.com/microsoft/WinAppDriver/releases/tag/v1.2.1>
 2. Open Command prmt and enter below commands
 >cd C:\Program Files (x86)\Windows Application Driver
+
 >WinAppDriver.exe
 
 ### Points:
