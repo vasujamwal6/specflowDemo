@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.12.1, )"
             },
+            "Appium.WebDriver": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
             "ExtentReports": {
               "target": "Package",
               "version": "[4.1.0, )"
@@ -84,7 +88,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.26.1, )"
+              "version": "[3.141.0, )"
             },
             "SpecFlow.NUnit": {
               "target": "Package",
@@ -93,6 +97,10 @@
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",
               "version": "[3.9.57, )"
+            },
+            "WebDriverManager": {
+              "target": "Package",
+              "version": "[2.17.4, )"
             },
             "nunit": {
               "target": "Package",

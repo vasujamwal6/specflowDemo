@@ -22,7 +22,6 @@ namespace demoTest.StepDefinitions
         string responseBody;
         string baseURI;
         string requestURI;
-        //private IWebDriver _driver;
 
 
         public APITestStepDefinitions(ScenarioContext scenarioContext)
@@ -30,7 +29,6 @@ namespace demoTest.StepDefinitions
             _scenarioContext = scenarioContext;
             call = new APICalls();
             baseURI = Hooks.Hooks.config.BaseURI;
-            //this._driver = driver;
 
         }
 

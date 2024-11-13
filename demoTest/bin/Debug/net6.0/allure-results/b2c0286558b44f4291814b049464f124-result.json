@@ -1,0 +1,173 @@
+{
+  "uuid": "06d8ee6f-eee4-4786-a015-fb90f1ae85c3",
+  "historyId": "8cfa254107dd96a7eff48f3925e3516e",
+  "testCaseId": "ba042e29de3b80a88e4fe98f8f346591",
+  "fullName": "demoTest/Features/Calculator/Add two numbers",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Calculator"
+    },
+    {
+      "name": "tag",
+      "value": "Calculator"
+    }
+  ],
+  "links": [],
+  "name": "Add two numbers",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  the Calculator application is open",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Application",
+          "value": "Calculator",
+          "excluded": false
+        }
+      ],
+      "start": 1731482907820,
+      "stop": 1731482907823
+    },
+    {
+      "name": "When  I enter \"One\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Number",
+          "value": "One",
+          "excluded": false
+        }
+      ],
+      "start": 1731482907823,
+      "stop": 1731482908134
+    },
+    {
+      "name": "And  I press the \"Plus\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Click Button",
+          "value": "Plus",
+          "excluded": false
+        }
+      ],
+      "start": 1731482908135,
+      "stop": 1731482908431
+    },
+    {
+      "name": "And  I enter \"Two\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Number",
+          "value": "Two",
+          "excluded": false
+        }
+      ],
+      "start": 1731482908431,
+      "stop": 1731482908726
+    },
+    {
+      "name": "And  I press the \"Equals\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Click Button",
+          "value": "Equals",
+          "excluded": false
+        }
+      ],
+      "start": 1731482908726,
+      "stop": 1731482909019
+    },
+    {
+      "name": "Then  the result should be \"3\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Result",
+          "value": "Display is 3",
+          "excluded": false
+        }
+      ],
+      "start": 1731482909019,
+      "stop": 1731482909081
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1731482907820,
+  "stop": 1731482909081
+}

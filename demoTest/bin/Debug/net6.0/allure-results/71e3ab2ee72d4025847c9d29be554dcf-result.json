@@ -1,0 +1,146 @@
+{
+  "uuid": "21d617ef-029b-4056-b4cd-d50018f6a106",
+  "historyId": "059f263ca9bda781d10472926aa5b8a9",
+  "testCaseId": "95f61d54c3f1c34496db8bb88185d656",
+  "fullName": "demoTest/Features/APITest/Verify user is able to create new object",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "APITest"
+    },
+    {
+      "name": "tag",
+      "value": "ApiTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify user is able to create new object",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  User has new object parameters as Blue and 128",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Color",
+          "value": "Blue",
+          "excluded": false
+        },
+        {
+          "name": "Capacity",
+          "value": "128",
+          "excluded": false
+        }
+      ],
+      "start": 1731482901742,
+      "stop": 1731482901743
+    },
+    {
+      "name": "When  User creates object with endpoint objects having Blue and 128",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Request URI",
+          "value": "https://api.restful-api.dev/objects",
+          "excluded": false
+        },
+        {
+          "name": "Request Body",
+          "value": "{\"name\":\"Test\",\"data\": {\"color\":\"Blue\", \"capacityGB\":\"128\"}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731482901743,
+      "stop": 1731482902527
+    },
+    {
+      "name": "Then  User verifies object is created with color Blue, capacity GB and status 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Response Status",
+          "value": "OK",
+          "excluded": false
+        },
+        {
+          "name": "Response Body",
+          "value": "{\"id\":\"ff80818193213c960193246c5eb90bbf\",\"name\":\"Test\",\"createdAt\":\"2024-11-13T07:28:22.201+00:00\",\"data\":{\"color\":\"Blue\",\"capacityGB\":\"128\"}}",
+          "excluded": false
+        }
+      ],
+      "start": 1731482902527,
+      "stop": 1731482902530
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Endpoint",
+      "value": "\"objects\"",
+      "excluded": false
+    },
+    {
+      "name": "StatusCode",
+      "value": "\"200\"",
+      "excluded": false
+    },
+    {
+      "name": "Color",
+      "value": "\"Blue\"",
+      "excluded": false
+    },
+    {
+      "name": "capacityGB",
+      "value": "\"128\"",
+      "excluded": false
+    }
+  ],
+  "start": 1731482901742,
+  "stop": 1731482902530
+}

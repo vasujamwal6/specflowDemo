@@ -1,5 +1,5 @@
 ﻿{
   "BrowserType": "chrome",
   "LogLevel": "All",
-  "BaseURI": "https://api.restful-api.dev/",
+  "BaseURI": "https://api.restful-api.dev/"
 }

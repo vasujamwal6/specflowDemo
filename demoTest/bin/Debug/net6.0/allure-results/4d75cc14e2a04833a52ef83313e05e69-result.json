@@ -1,0 +1,110 @@
+{
+  "uuid": "1098bca0-23b3-45cc-8961-a5e2e8332ebd",
+  "historyId": "265618cc62191c73c6fda2b9515eb4ea",
+  "testCaseId": "829e28a2c7afb3d8757361771d9da72a",
+  "fullName": "demoTest/Features/Verify youtube search feature/Search for BBC Earth2",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "SDET-LT88"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Verify youtube search feature"
+    },
+    {
+      "name": "tag",
+      "value": "UI"
+    }
+  ],
+  "links": [],
+  "name": "Search for BBC Earth2",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  Open the browser",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Web Application",
+          "value": "Youtube",
+          "excluded": false
+        }
+      ],
+      "start": 1731482926686,
+      "stop": 1731482926687
+    },
+    {
+      "name": "When  Enter the URL",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "URL",
+          "value": "https://www.youtube.com/",
+          "excluded": false
+        }
+      ],
+      "start": 1731482926687,
+      "stop": 1731482931830
+    },
+    {
+      "name": "Then  Search for the BBC Earth",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Search Term",
+          "value": "BBC Earth",
+          "excluded": false
+        }
+      ],
+      "start": 1731482931830,
+      "stop": 1731482936999
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1731482926686,
+  "stop": 1731482936999
+}

@@ -1,4 +1,8 @@
+using demoTest.APIActions;
+using NUnit.Framework;
 using OpenQA.Selenium;
+using TechTalk.SpecFlow;
+using static HarmonyLib.Code;
 
 namespace demoTest.StepDefinitions
 {
@@ -8,26 +12,33 @@ namespace demoTest.StepDefinitions
     public sealed class Feature1StepDefinitions
     {
         private IWebDriver driver;
+        private readonly ScenarioContext _scenarioContext;
+        APICalls call;
+        string url = "https://www.youtube.com/";
 
-        public Feature1StepDefinitions(IWebDriver driver)
+        public Feature1StepDefinitions(IWebDriver driver, ScenarioContext scenarioContext)
         {
             this.driver = driver;
+            _scenarioContext = scenarioContext;
+            call = new APICalls();
         }
 
 
         [Given(@"Open the browser")]
         public void GivenOpenTheBrowser()
         {
-            //   driver = new ChromeDriver();
-            //   driver.Manage().Window.Maximize();
+            Assert.IsNotNull(driver, "WebDriver session did not initialize.");
+            AddLogToContext("Launch Web Application: Youtube");
+            call.addValuesToAllureReport("Web Application", "Youtube");
         }
 
         [When(@"Enter the URL")]
         public void WhenEnterTheURL()
         {
-            driver.Url = "https://www.youtube.com/";
+            driver.Url = url;
             Thread.Sleep(3000);
-
+            AddLogToContext($"URL: {url}");
+            call.addValuesToAllureReport("URL", url);
         }
 
         [Then(@"Search for the BBC Earth")]
@@ -36,8 +47,14 @@ namespace demoTest.StepDefinitions
             driver.FindElement(By.XPath("//*[@name='search_query']")).SendKeys("BBC Earth");
             driver.FindElement(By.XPath("//*[@name='search_query']")).SendKeys(Keys.Enter);
             Thread.Sleep(5000);
-            //  driver.Quit();
+            AddLogToContext("Search Term: BBC Earth");
+            call.addValuesToAllureReport("Search Term", "BBC Earth");
         }
 
+        private void AddLogToContext(string message)
+        {
+            var logs = _scenarioContext["StepLogs"] as List<string>;
+            logs?.Add(message);
+        }
     }
 }

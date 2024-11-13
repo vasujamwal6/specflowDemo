@@ -11,6 +11,11 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
 using Allure.Net.Commons;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Appium;
+using WebDriverManager.DriverConfigs.Impl;
+using WebDriverManager;
+using demoTest.Pages;
 
 namespace demoTest.Hooks
 {
@@ -20,6 +25,9 @@ namespace demoTest.Hooks
         private readonly IObjectContainer _container;
         public static ConfigSetting config;
         static IWebDriver driver;
+        private const string WinAppDriverUrl = "http://127.0.0.1:4723";
+        private const string CalculatorAppId = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App";
+        private static WindowsDriver<WindowsElement> desktopDriver;
 
         static string configsettingpath = System.IO.Directory.GetParent(@"../../../").FullName
             + Path.DirectorySeparatorChar + "Configuration/configsetting.json";
@@ -38,7 +46,7 @@ namespace demoTest.Hooks
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            RunBatchFile(clearResultsBatchFilePath);
+            Common.RunBatchFile(clearResultsBatchFilePath);
             config = new ConfigSetting();
             ConfigurationBuilder builder = new ConfigurationBuilder();
             builder.AddJsonFile(configsettingpath);
@@ -75,19 +83,55 @@ namespace demoTest.Hooks
             Console.WriteLine("Running inside tagged hooks in specflow");
         }
 
+        [BeforeScenario("@Calculator")]
+        public static void Setup()
+        {
+            if (driver == null)
+            {
+                var appOptions = new AppiumOptions();
+
+                appOptions.AddAdditionalCapability("app", CalculatorAppId);
+
+                desktopDriver = new WindowsDriver<WindowsElement>(new Uri(WinAppDriverUrl), appOptions);
+            }
+        }
+
         [BeforeScenario(Order = 1)]
         public void FirstBeforeScenario(ScenarioContext scenarioContext)
         {
             Console.WriteLine("Running before scenario...");
             if (scenarioContext.ScenarioInfo.Tags.Contains("UI"))
             {
-                driver = GetWebDriver();
+                //driver = GetWebDriver();                                   //For new version configuration
+                driver = GetWebDriver1(); 
 
                 _container.RegisterInstanceAs<IWebDriver>(driver);
             }
             _scenario = _feature.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             scenarioContext["StepLogs"] = new List<string>(); // Initialize a log list for the scenario
 
+        }
+
+        public IWebDriver GetWebDriver1()
+        {
+            if (Hooks.config.BrowserType.ToLower() == "chrome")
+            {
+                new DriverManager().SetUpDriver(new ChromeConfig());
+                driver = new ChromeDriver();
+            }
+            else if (Hooks.config.BrowserType.ToLower() == "firefox")
+            {
+                new DriverManager().SetUpDriver(new FirefoxConfig());
+                driver = new FirefoxDriver();
+            }
+            else if (Hooks.config.BrowserType.ToLower() == "edge")
+            {
+                new DriverManager().SetUpDriver(new EdgeConfig());
+                driver = new EdgeDriver();
+            }
+            driver?.Manage().Window.Maximize();
+
+            return driver;
         }
 
         public IWebDriver GetWebDriver() {
@@ -175,7 +219,7 @@ namespace demoTest.Hooks
                         _scenario.CreateNode<And>(stepName).Fail(scenarioContext.TestError.Message,
                             MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build()).Log(AventStack.ExtentReports.Status.Fail, scenarioContext.TestError.StackTrace);
                     }
-                    byte[] content = CaptureScreenshot();
+                    byte[] content = Common.CaptureScreenshot(driver);
                     AllureApi.AddAttachment("Failed Screenshot", "image/png", content);
                 }
                 else {
@@ -208,42 +252,15 @@ namespace demoTest.Hooks
 
         }
 
-        public static byte[] CaptureScreenshot()
+        [AfterScenario("@Calculator")]
+        public static void TearDown()
         {
-            return ((ITakesScreenshot)driver).GetScreenshot().AsByteArray;
+            desktopDriver?.Quit();
+            desktopDriver = null;
         }
 
-        private static void RunBatchFile(string batchFilePath)
-        {
-            var processInfo = new System.Diagnostics.ProcessStartInfo("cmd.exe", "/C \"" + batchFilePath + "\"")
-            {
-                RedirectStandardOutput = true,
-                RedirectStandardError = true, // Redirect error output
-                UseShellExecute = false,
-                CreateNoWindow = true // Set to true for background execution without a window
-            };
+        public static WindowsDriver<WindowsElement> GetDriver() => desktopDriver;
 
-            using (var process = System.Diagnostics.Process.Start(processInfo))
-            {
-                // Capture the output and errors
-                string output = process.StandardOutput.ReadToEnd();
-                string errorOutput = process.StandardError.ReadToEnd();
-
-                // Wait for the process to exit
-                process.WaitForExit();
-
-                // Check the exit code
-                if (process.ExitCode != 0)
-                {
-                    Console.WriteLine("Batch file execution failed with exit code: " + process.ExitCode);
-                    Console.WriteLine("Error Output: " + errorOutput);
-                    // Handle the failure accordingly, e.g., logging or throwing an exception
-                    throw new Exception("Batch file execution failed: " + errorOutput);
-                }
-
-                // If needed, process the output
-                Console.WriteLine("Batch output: " + output);
-            }
-        }
+      
     }
 }
